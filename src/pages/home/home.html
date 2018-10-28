@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Lunch
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="launchRegisterPage()"><ion-icon name="settings"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<h3>What did you have for lunch?</h3>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Picture</ion-label>
+      <ion-input [(ngModel)]="mealPic" type="upload"></ion-input>
+    </ion-item>
+  </ion-list>
+  <p>Picture: {{mealPic}}</p>
+  <button (click)="saveMeal()" ion-button>Save</button>
+</ion-content>
